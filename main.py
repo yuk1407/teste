@@ -1,4 +1,4 @@
-
+import os
 from datetime import datetime
 
 dados = {}
@@ -34,7 +34,7 @@ def main():
 
 
     # SALVAR ALTERAÇÕES NO ARQUIVO
-    def salvar(): #SALVA
+    def salvar(): 
         with open("arquivos.txt", "w", encoding="utf8") as arquivo:
             for matricula, info in dados.items(): #ESCREVE OS DADOS DO DICIONÁRIO NO ARQUIVO
                 arquivo.write(
@@ -46,6 +46,7 @@ def main():
 
     # REGISTRAR USUÁRIO
     def registrar():
+        os.system("cls")
         consultar()
 
         matricula = input("Qual a matrícula do usuário: ")
@@ -72,6 +73,7 @@ def main():
 
     # VISUALIZAR USUÁRIO
     def visualizar():
+        os.system("cls")
         consultar()
 
         if len(dados) == 0:
@@ -107,6 +109,7 @@ def main():
 
     # ATUALIZAR USUÁRIO
     def atualizar():
+        os.system("cls")
         consultar()
 
         matricula = input("Digite a matrícula do usuário que deseja atualizar: ")
@@ -147,6 +150,7 @@ def main():
 
     # DELETAR USUÁRIO
     def deletar():
+        os.system("cls")
         consultar()
 
         matricula = input("Digite a matrícula do usuário que deseja deletar: ")
@@ -169,6 +173,7 @@ def main():
 
     # MATRÍCULA OCULTA
     def matricula():
+        os.system("cls")
         consultar()
 
         nome = input("Digite o nome do usuário: ")
@@ -190,6 +195,7 @@ def main():
 
     # MENU PRINCIPAL
     while True:
+
 
         print("\n=== Sentinelalog ===")
         print("1. Registrar usuário")
